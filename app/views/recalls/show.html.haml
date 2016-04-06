@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @recall.title
+%p
+  %b Body:
+  = @recall.body
+%p
+  %b Film:
+  = @recall.film
+%p
+  %b User:
+  = @recall.user
+
+= link_to 'Edit', edit_recall_path(@recall)
+\|
+= link_to 'Back', recalls_path

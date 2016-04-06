@@ -1,0 +1,22 @@
+= form_for @recall do |f|
+  - if @recall.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@recall.errors.count, "error")} prohibited this recall from being saved:"
+      %ul
+        - @recall.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :body
+    = f.text_area :body
+  .field
+    = f.label :film
+    = f.text_field :film
+  .field
+    = f.label :user
+    = f.text_field :user
+  .actions
+    = f.submit 'Save'

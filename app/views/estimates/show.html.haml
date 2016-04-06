@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b E type:
+  = @estimate.e_type
+%p
+  %b Recall:
+  = @estimate.recall
+%p
+  %b User:
+  = @estimate.user
+
+= link_to 'Edit', edit_estimate_path(@estimate)
+\|
+= link_to 'Back', estimates_path

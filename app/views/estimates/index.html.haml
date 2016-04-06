@@ -1,0 +1,25 @@
+%h1 Listing estimates
+
+%table
+  %thead
+    %tr
+      %th E type
+      %th Recall
+      %th User
+      %th
+      %th
+      %th
+
+  %tbody
+    - @estimates.each do |estimate|
+      %tr
+        %td= estimate.e_type
+        %td= estimate.recall
+        %td= estimate.user
+        %td= link_to 'Show', estimate
+        %td= link_to 'Edit', edit_estimate_path(estimate)
+        %td= link_to 'Destroy', estimate, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Estimate', new_estimate_path

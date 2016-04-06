@@ -1,0 +1,27 @@
+%h1 Listing recalls
+
+%table
+  %thead
+    %tr
+      %th Title
+      %th Body
+      %th Film
+      %th User
+      %th
+      %th
+      %th
+
+  %tbody
+    - @recalls.each do |recall|
+      %tr
+        %td= recall.title
+        %td= recall.body
+        %td= recall.film
+        %td= recall.user
+        %td= link_to 'Show', recall
+        %td= link_to 'Edit', edit_recall_path(recall)
+        %td= link_to 'Destroy', recall, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Recall', new_recall_path

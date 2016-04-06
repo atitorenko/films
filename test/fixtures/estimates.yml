@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  e_type: false
+  recall_id: 
+  user_id: 
+
+two:
+  e_type: false
+  recall_id: 
+  user_id: 
